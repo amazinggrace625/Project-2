@@ -1,0 +1,229 @@
+/*CSS FOR CSS GRID*/
+:root {
+  --lightest: #FCFFF5; /* off-white */
+  --light: #ECC88C; /* tan */
+  --semi: #B7B568; /* light green */
+  --medium: #71A946; /* medium green */
+  --dark: #365223; /* dark green */
+  --darkest: #262324; /* black */
+}
+
+/* General Styles */
+
+html {
+  color: var(--darkest);
+  font-family: brother-1816, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+img {
+  width: 150%;
+}
+
+ul {
+  display: grid;
+  margin: 5%;
+  grid-template-columns: repeat(8, 1fr);
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  line-height: 10rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--darkest);
+}
+
+a:hover {
+	color: var(--medium);
+}
+
+a.current {
+	color: var(--medium);
+  font-weight: 600;
+}
+
+/* Home Page */
+
+/* Our Community Page */
+
+#containerSecond {
+	display: grid;
+	grid-gap: 20px;
+	margin-top: 4%;
+	grid-template-columns: repeat(4,1fr);
+	grid-template-areas:
+	"m m m n";
+}
+
+.vimeo {
+	grid-area: m;
+}
+
+.feedtw {
+	grid-area: n;
+}
+
+/* Contact Page */
+
+#containerThird {
+	display: grid;
+	grid-gap: 20px;
+	margin-top: 4%;
+	grid-template-columns: repeat(4,1fr);
+	grid-template-areas:
+	"r r r s";
+}
+
+.fillform {
+	grid-area: r;
+}
+
+.app {
+	grid-area: s;
+	width: 70%;
+	margin: 0 auto; /* centering a block element - needs a width to work */
+}
+
+video {
+	width: 100%;
+}
+
+/* Contact Page */
+
+.thankyou {
+  background-color: var(--semi);
+  color: var(--lightest);
+  padding: 3rem;
+  margin-bottom: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 3rem;
+  text-align: center;
+}
+
+#topthanks {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#backbutton {
+  background-color: var(--darkest);
+  text-align: center;
+  padding: 1rem;
+  margin-left: 40%;
+  margin-right: 40%;
+  border-radius: 2rem;
+}
+
+#backbutton:hover {
+  background-color: var(--medium);
+  text-align: center;
+  padding: 1rem;
+  margin-left: 40%;
+  margin-right: 40%;
+  border-radius: 2rem;
+  font-weight: bold;
+}
+
+#backbuttonlink {
+  color: var(--lightest);
+  font-weight: 300;
+}
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  font-family: brother-1816, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  font-family: brother-1816, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.fillform {
+  border-radius: .5rem;
+  background-color: var(--semi);
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  img {
+    max-width: 50%;
+  }
+
+  ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+	#containerSecond {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"m"
+		"n";
+  }
+
+  #containerThird {
+  	grid-template-columns: 1fr;
+  	grid-template-areas:
+  	"r"
+  	"s";
+  	}
+}
