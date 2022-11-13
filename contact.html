@@ -25,64 +25,69 @@
 			<p>please fill out the form below</p>
 			<img src="images/BurgerJointLogo_LOGO2.png" alt="">
 		</div>
-		<div id="containerThird">
-			<div class="fillform">
-				<form action="thankyou.html">
-			    <div class="row">
-			      <div class="col-25">
-			        <label for="fname">First Name</label>
-			      </div>
-			      <div class="col-75">
-			        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-			      </div>
-			    </div>
-			    <div class="row">
-			      <div class="col-25">
-			        <label for="lname">Last Name</label>
-			      </div>
-			      <div class="col-75">
-			        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-			      </div>
-			    </div>
-					<div class="row">
-			      <div class="col-25">
-			        <label for="fname">Email</label>
-			      </div>
-			      <div class="col-75">
-			        <input type="text" id="email" name="email" placeholder="Your email..">
-			      </div>
-			    </div>
-			    <div class="row">
-			      <div class="col-25">
-			        <label for="subject">Subject</label>
-			      </div>
-			      <div class="col-75">
-			        <select id="subject" name="subject">
-			          <option value="Review">Review</option>
-			          <option value="Question">Question</option>
-			          <option value="Comment">Comment</option>
-								<option value="Concern">Concern</option>
-			        </select>
-			      </div>
-			    </div>
-			    <div class="row">
-			      <div class="col-25">
-			        <label for="message">Message</label>
-			      </div>
-			      <div class="col-75">
-			        <textarea id="message" name="message" placeholder="Write your message.." style="height:200px"></textarea>
-			      </div>
-			    </div>
-			    <div class="row">
-			      <input type="submit" value="Submit">
-			    </div>
-  			</form>
-			</div>
-			<div class="video">
-				<video controls autoplay muted>
-					<source src="Video/BrettFry.mp4" type="video/mp4">
-				</video>
-			</div>
+		<section id="last">
+		      <!-- heading -->
+		      <div class="full">
+		        <h3>Drop a Message</h3>
+
+		        <div class="lt">
+
+		          <!-- form starting  -->
+		          <form class="form-horizontal"
+		                method="post" action="contact.php">
+		            <div class="form-group">
+		              <div class="col-sm-12">
+		                <!-- name  -->
+		                <input
+		                  type="text"
+		                  class="form-control"
+		                  id="name"
+		                  placeholder="NAME"
+		                  name="name"
+		                  value=""
+		                />
+		              </div>
+		            </div>
+
+								<div class="form-group">
+						<div class="col-sm-12">
+							<!-- email  -->
+							<input
+								type="email"
+								class="form-control"
+								id="email"
+								placeholder="EMAIL"
+								name="email"
+								value=""
+							/>
+						</div>
+					</div>
+
+					<!-- message  -->
+					<textarea
+						class="form-control"
+						rows="10"
+						placeholder="MESSAGE"
+						name="message">
+					</textarea>
+
+					<button
+						class="btn btn-primary send-button"
+						id="submit"
+						type="submit"
+						value="SEND">
+						<i class="fa fa-paper-plane"></i>
+						<span class="send-text">SEND</span>
+					</button>
+				</form>
+				 </div>
+				 </div>
+				 </section>
+		<div class="video">
+			<video controls autoplay muted>
+				<source src="Video/BrettFry.mp4" type="video/mp4">
+			</video>
+		</div>
 </div>
 		<footer>
 		</footer>
